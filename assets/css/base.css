@@ -1,0 +1,265 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --boder-color: #dbdbdb;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+
+}
+*{
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Helvetica Neue,Helvetica,Arial,文泉驛正黑,WenQuanYi Zen Hei,Hiragino Sans GB,儷黑 Pro,LiHei Pro,Heiti TC,微軟正黑體,Microsoft JhengHei UI,Microsoft JhengHei,sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+/* responsive */
+
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+.grid__column_2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column_2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.667%;
+}
+
+.grid__column_10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.334%;
+    
+}
+
+/* animation */
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* test */
+
+
+
+@keyframes Headernotify {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    animation: fadein linear 0.1s;
+    z-index: 1;
+}
+
+.modal1{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    animation: fadein linear 0.1s;
+    z-index: 1;
+}
+
+.header__navbar-item--strong:checked~ .modal{
+    display: flex;
+}
+
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__body{
+    background-color: #fff;
+    margin: auto;
+    z-index: 1;
+    border-radius: 5px;
+    animation: Headernotify linear 0.1s ;
+}
+
+
+.btn{
+    min-width: 124px;
+    min-height: 36px;
+    border: 0px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+}
+
+.btn1{
+    min-width: 142px;
+    min-height: 36px;
+    border: 0px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: #3A5A98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.btn2{
+    min-width: 142px;
+    min-height: 36px;
+    border: 0px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn.btn--primary{
+    background-color: #fe6433;
+    color: #fff;
+}
+
+.btn.btn--disabled{
+    cursor: default;
+    filter: brightness(60%);
+}
+
+.btn .btn--size-s{
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+/* select */
+.select-input{
+    padding: 0 12px;
+    height: 34px;
+    border-radius: 2px;
+    background-color: #fff;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.select-label{
+    font-size: 1.4rem;
+}
+.select-list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 74%;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 8px 16px;
+    list-style: none;
+    box-shadow: 1px 1px 1px #ccc;
+    display: none;
+    z-index: 1;
+}
+
+.select-list-item_link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    padding: 4px 0;
+    float: left;
+}
+.select-list-item_link:hover{
+    color: #fe6433;
+}
+
+/* pagination */
+.pagination{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.pagination-active .pagination-link{
+    background-color: #fe6433;
+    color: #fff;
+
+}
+
+.pagination-item{  
+    margin: 0 8px;
+}
+.pagination-icon{
+    font-size: 1.6rem;
+}
+
+.pagination-link{
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #939393;
+    height: 30px;
+    min-width: 40px;
+    text-align: center;   
+     border-radius: 3px;/*  */
+    
+}

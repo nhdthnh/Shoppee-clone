@@ -1,0 +1,36 @@
+/* mobile and tablet */
+@media (max-width: 1023px){
+    .hide-on-mb-tb{
+        display: none;
+    }
+    :root{
+        --header-height: 120px;
+        --navbar-height: 0px;
+        --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    }
+    .header__cart-list{
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width:1023px) {
+    .hide-on-tb{
+        display: none;
+    }
+    .header__cart{
+        width: 150px;
+        text-align: right;
+    }
+}
+
+/* mobile */
+@media (max-width: 739px){
+    .hide-on-mb{
+        display: none;
+    }
+}
